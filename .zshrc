@@ -1,10 +1,21 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+######### ADDITIONAL RC LOADING
+
 ZSH_ADDITIONAL_FILES=(
 	"$HOME/.zshrc.local"
+	"$(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme"
+	"$HOME/dotfiles/.p10k.zsh"
 )
 
 for rc_file in $ZSH_ADDITIONAL_FILES; do
 	if [[ -f "$rc_file" ]]; then
-		echo "Sourcing additional rc file: $rc_file"
+		echo "Sourcing additional file: $rc_file"
 		source "$rc_file";
 	fi
 done
