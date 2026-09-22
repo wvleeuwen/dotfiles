@@ -1,10 +1,11 @@
 ZSH_ADDITIONAL_FILES=(
-	"~/.zshrc.local"
+	"$HOME/.zshrc.local"
 )
 
 for rc_file in $ZSH_ADDITIONAL_FILES; do
 	if [[ -f "$rc_file" ]]; then
-		source $rc_file;
+		echo "Sourcing additional rc file: $rc_file"
+		source "$rc_file";
 	fi
 done
 
