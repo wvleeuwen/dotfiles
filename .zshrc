@@ -5,6 +5,9 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+fpath=($HOME/.docker/completions $fpath)
+autoload -Uz compinit && compinit
+
 ######### ADDITIONAL RC LOADING
 
 ZSH_ADDITIONAL_FILES=(
