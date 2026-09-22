@@ -20,6 +20,11 @@ for rc_file in $ZSH_ADDITIONAL_FILES; do
 	fi
 done
 
+######### SHELL INTEGRATIONS
+
+source <(fzf --zsh)
+eval "$(zoxide init zsh)"
+
 ######### ALIASES
 
 alias dotfiles="cd ~/dotfiles && nvim ."
