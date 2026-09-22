@@ -18,7 +18,7 @@ ZSH_ADDITIONAL_FILES=(
 
 for rc_file in $ZSH_ADDITIONAL_FILES; do
 	if [[ -f "$rc_file" ]]; then
-		echo "Sourcing additional file: $rc_file"
+		# echo "DEBUG: Sourcing additional file: $rc_file"
 		source "$rc_file";
 	fi
 done
