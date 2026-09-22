@@ -20,13 +20,18 @@ for rc_file in $ZSH_ADDITIONAL_FILES; do
 	fi
 done
 
-alias dotfiles="cd ~/dotfiles && nvim ."
+######### ALIASES
 
+alias dotfiles="cd ~/dotfiles && nvim ."
+alias k='kubectl'
+alias d='docker'
+alias dc='docker compose'
 alias vi=nvim
 alias vim=nvim
+
 export EDITOR=nvim
 export VISUAL=nvim
-bindkey -e
+bindkey -e # Use emacs bindings for the prompt
 
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
