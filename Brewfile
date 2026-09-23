@@ -7,3 +7,5 @@ brew "powerlevel10k"
 brew "fzf"
 # Shell extension to navigate your filesystem faster
 brew "zoxide"
+# Clone of cat(1) with syntax highlighting and Git integration
+brew "bat"
