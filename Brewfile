@@ -15,3 +15,10 @@ brew "tree"
 cask "ghostty"
 # Keyboard customiser
 cask "karabiner-elements"
+# Kubernetes command-line interface
+brew "kubernetes-cli"
+# Kubernetes CLI To Manage Your Clusters In Style!
+brew "k9s"
+# Kubernetes package manager
+brew "helm"
+
