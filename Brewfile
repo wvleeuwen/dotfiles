@@ -13,3 +13,5 @@ brew "bat"
 brew "tree"
 # Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
+# Keyboard customiser
+cask "karabiner-elements"
