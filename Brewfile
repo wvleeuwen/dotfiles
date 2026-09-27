@@ -11,3 +11,5 @@ brew "zoxide"
 brew "bat"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
+# Terminal emulator that uses platform-native UI and GPU acceleration
+cask "ghostty"
