@@ -703,6 +703,7 @@ do
     bashls = {},
     -- clangd = {},
     -- gopls = {},
+    intelephense = {},
     -- pyright = {},
     -- rust_analyzer = {},
     --
