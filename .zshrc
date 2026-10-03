@@ -30,7 +30,7 @@ eval "$(zoxide init zsh)"
 
 ######### ALIASES
 
-alias dotfiles="cd ~/dotfiles && nvim ."
+alias dot="cd ~/dotfiles && nvim ."
 alias k='kubectl'
 alias d='docker'
 alias dc='docker compose'
