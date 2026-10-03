@@ -15,6 +15,23 @@ brew "tree"
 cask "ghostty"
 # Keyboard customiser
 cask "karabiner-elements"
+# Utility for directing compilation
+brew "make"
+# Process YAML, JSON, XML, CSV and properties documents from the CLI
+brew "yq"
+# Incremental parsing library
+brew "tree-sitter"
+# Parser generator tool
+brew "tree-sitter-cli"
+# Ambitious Vim-fork focused on extensibility and agility
+brew "neovim"
+# Executes a program periodically, showing output fullscreen
+brew "watch"
+# Terminal multiplexer
+brew "tmux"
+# Organize software neatly under a single directory tree (e.g. /usr/local)
+brew "stow"
+
 # Kubernetes command-line interface
 brew "kubernetes-cli"
 # Kubernetes CLI To Manage Your Clusters In Style!
@@ -36,11 +53,9 @@ brew "poppler"
 brew "fd"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
-# Command-line fuzzy finder written in Go
-brew "fzf"
-# Shell extension to navigate your filesystem faster
-brew "zoxide"
 # SVG rendering tool and library
 brew "resvg"
 # Tools and libraries to manipulate images in many formats
 brew "imagemagick-full"
+cask "font-symbols-only-nerd-font"
+
