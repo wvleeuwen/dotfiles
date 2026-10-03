@@ -22,3 +22,25 @@ brew "k9s"
 # Kubernetes package manager
 brew "helm"
 
+# Blazing fast terminal file manager written in Rust, based on async I/O
+brew "yazi"
+# Play, record, convert, and stream many audio and video codecs
+brew "ffmpeg-full"
+# 7-Zip is a file archiver with a high compression ratio
+brew "sevenzip"
+# Lightweight and flexible command-line JSON processor
+brew "jq"
+# PDF rendering library (based on the xpdf-3.0 code base)
+brew "poppler"
+# Simple, fast and user-friendly alternative to find
+brew "fd"
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
+# Command-line fuzzy finder written in Go
+brew "fzf"
+# Shell extension to navigate your filesystem faster
+brew "zoxide"
+# SVG rendering tool and library
+brew "resvg"
+# Tools and libraries to manipulate images in many formats
+brew "imagemagick-full"
