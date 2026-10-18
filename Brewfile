@@ -59,3 +59,4 @@ brew "resvg"
 brew "imagemagick-full"
 cask "font-symbols-only-nerd-font"
 
+brew "lazygit"
