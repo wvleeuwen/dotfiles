@@ -1,4 +1,4 @@
-
+tap "felixkratz/formulae", "https://github.com/FelixKratz/homebrew-formulae", trusted: true
 # AeroSpace is an i3-like tiling window manager for macOS
 cask "nikitabobko/tap/aerospace"
 # Theme for zsh
@@ -58,5 +58,7 @@ brew "resvg"
 # Tools and libraries to manipulate images in many formats
 brew "imagemagick-full"
 cask "font-symbols-only-nerd-font"
-
+cask "font-hack-nerd-font"
+# Custom macOS statusbar with shell plugin, interaction and graph support
+brew "felixkratz/formulae/sketchybar", trusted: true
 brew "lazygit"

@@ -49,3 +49,6 @@ function y() {
 	command rm -f -- "$tmp"
 }
 
+function focus() {
+	vim ~/focus.txt
+}
