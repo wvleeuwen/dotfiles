@@ -50,5 +50,10 @@ function y() {
 }
 
 function focus() {
-	vim ~/focus.txt
+	focus_file="$HOME/focus.txt"
+	if [ -z "$1" ]; then
+		vim "$focus_file"
+	else
+		echo $1 > "$focus_file"
+	fi
 }
