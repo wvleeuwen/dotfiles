@@ -1,11 +1,5 @@
 #!/usr/bin/env bash
 
-# Monitor plugged in or removed: rebuild the items from scratch
-if [ "$SENDER" = "display_change" ]; then
-  sketchybar --reload
-  exit 0
-fi
-
 focused=$(aerospace list-monitors --focused --format '%{monitor-id}')
 
 set --
