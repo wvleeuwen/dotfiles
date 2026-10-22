@@ -1,23 +1,22 @@
 #!/usr/bin/env bash
 
-focused=$(aerospace list-workspaces --focused)
-occupied=$(aerospace list-workspaces --monitor all --empty no)
+# Monitor plugged in or removed: rebuild the items from scratch
+if [ "$SENDER" = "display_change" ]; then
+  sketchybar --reload
+  exit 0
+fi
 
-args=""
-for sid in $(aerospace list-workspaces --all); do
-  if echo "$focused" | grep -qx "$sid"; then
-    args="$args --set space.$sid drawing=on background.color=0xffd35400"
-  elif echo "$occupied" | grep -qx "$sid"; then
-    args="$args --set space.$sid drawing=on background.color=0x33ffffff"
+focused=$(aerospace list-monitors --focused --format '%{monitor-id}')
+
+set --
+for mid in $(aerospace list-monitors --format '%{monitor-id}'); do
+  ws=$(aerospace list-workspaces --monitor "$mid" --visible)
+  if [ "$mid" = "$focused" ]; then
+    label="[ $ws ]"
   else
-    args="$args --set space.$sid drawing=off"
+    label="$ws"
   fi
+  set -- "$@" --set "ws.$mid" label="$label"
 done
 
-sketchybar $args   # one batched call instead of N
-#
-# if [ "$1" = "$FOCUSED_WORKSPACE" ]; then
-#     sketchybar --set $NAME background.drawing=on
-# else
-#     sketchybar --set $NAME background.drawing=off
-# fi
+sketchybar "$@"
