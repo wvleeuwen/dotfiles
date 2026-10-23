@@ -39,11 +39,9 @@ sketchybar --add event aerospace_workspace_change
 
 monitors=$(aerospace list-monitors --format '%{monitor-id}|%{monitor-appkit-nsscreen-screens-id}')
 for m in $monitors; do
-  echo "$m"
   mid=$(echo "$m" | awk -F'|' '{print $1}')
   did=$(echo "$m" | awk -F'|' '{print $2}')
 
-  echo "$mid $did"
   sketchybar --add item "ws.$mid" left \
     --set "ws.$mid" display="$did" icon.drawing=off \
           click_script="aerospace focus-monitor $mid"
