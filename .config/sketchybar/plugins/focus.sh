@@ -1,3 +1,10 @@
 #!/usr/bin/env bash
 
-sketchybar --set "$NAME" label="[ $(cat ~/focus.txt) ]"
+focustext=$(cat ~/focus.txt)
+
+if [[ -n "$focustext" ]]; then
+	sketchybar --set "$NAME" label="[ $focustext ]"
+else
+	sketchybar --set "$NAME" label=""
+fi
+
