@@ -62,3 +62,5 @@ cask "font-hack-nerd-font"
 # Custom macOS statusbar with shell plugin, interaction and graph support
 brew "felixkratz/formulae/sketchybar", trusted: true
 brew "lazygit"
+
+cask "bruno"
