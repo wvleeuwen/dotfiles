@@ -1,6 +1,5 @@
 tap "felixkratz/formulae", "https://github.com/FelixKratz/homebrew-formulae", trusted: true
-# AeroSpace is an i3-like tiling window manager for macOS
-cask "nikitabobko/tap/aerospace"
+
 # Theme for zsh
 brew "powerlevel10k"
 # Command-line fuzzy finder written in Go
@@ -11,10 +10,6 @@ brew "zoxide"
 brew "bat"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
-# Terminal emulator that uses platform-native UI and GPU acceleration
-cask "ghostty"
-# Keyboard customiser
-cask "karabiner-elements"
 # Utility for directing compilation
 brew "make"
 # Process YAML, JSON, XML, CSV and properties documents from the CLI
@@ -31,14 +26,12 @@ brew "watch"
 brew "tmux"
 # Organize software neatly under a single directory tree (e.g. /usr/local)
 brew "stow"
-
 # Kubernetes command-line interface
 brew "kubernetes-cli"
 # Kubernetes CLI To Manage Your Clusters In Style!
 brew "k9s"
 # Kubernetes package manager
 brew "helm"
-
 # Blazing fast terminal file manager written in Rust, based on async I/O
 brew "yazi"
 # Play, record, convert, and stream many audio and video codecs
@@ -57,10 +50,16 @@ brew "ripgrep"
 brew "resvg"
 # Tools and libraries to manipulate images in many formats
 brew "imagemagick-full"
-cask "font-symbols-only-nerd-font"
-cask "font-hack-nerd-font"
 # Custom macOS statusbar with shell plugin, interaction and graph support
 brew "felixkratz/formulae/sketchybar", trusted: true
 brew "lazygit"
 
 cask "bruno"
+# AeroSpace is an i3-like tiling window manager for macOS
+cask "nikitabobko/tap/aerospace"
+# Terminal emulator that uses platform-native UI and GPU acceleration
+cask "ghostty"
+# Keyboard customiser
+cask "karabiner-elements"
+cask "font-symbols-only-nerd-font"
+cask "font-hack-nerd-font"
