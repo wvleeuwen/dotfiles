@@ -57,3 +57,25 @@ function focus() {
 		echo $1 > "$focus_file"
 	fi
 }
+
+function ticket() {
+	local vault="$HOME/Documents/vaults/Personal" title="$1"
+	local filepath="$vault/ProjectManagement/Tickets/$title.md"
+
+	if [[ -z "$title" ]]; then
+		echo "Error: no ticket title specified"
+		return 1;
+	fi
+
+	if [ -f "$filepath" ]; then
+		echo "Error: ticket by that name already exists"
+		return 1;
+	fi
+
+	cat > "$filepath" <<EOF
+---
+status: inbox
+created: $(date +%F)
+---
+EOF
+}
