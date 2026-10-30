@@ -125,6 +125,16 @@ do
   -- Keep file inodes intact when saving
   -- This forces vim to overwrite the original file instead of creating a new file and renaming it.
   vim.opt.backupcopy = "yes"
+
+  -- Set the terminal (tmux pane) title to the project name: the git root, or the cwd outside a repo
+  vim.o.title = true
+  local function set_project_title()
+    local cwd = vim.fn.getcwd()
+    local root = vim.fs.root(cwd, '.git') or cwd
+    vim.o.titlestring = vim.fs.basename(root)
+  end
+  set_project_title()
+  vim.api.nvim_create_autocmd('DirChanged', { callback = set_project_title })
 end
 
 -- ============================================================
