@@ -41,6 +41,8 @@ export EDITOR=nvim
 export VISUAL=nvim
 bindkey -e # Use emacs bindings for the prompt
 
+export XDG_CONFIG_HOME="$HOME/.config"
+
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
 	command yazi "$@" --cwd-file="$tmp"
