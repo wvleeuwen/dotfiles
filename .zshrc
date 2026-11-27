@@ -36,6 +36,7 @@ alias d='docker'
 alias dc='docker compose'
 alias vi=nvim
 alias vim=nvim
+alias lgit=lazygit
 
 export EDITOR=nvim
 export VISUAL=nvim
